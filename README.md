@@ -21,6 +21,23 @@ left, right := 0, len(aSlice)-1
 mid := left + (right-left)/2
 ```
 
+Slicing slice
+
+```go
+// aSlice[low:high] -> elements from index low to high-1
+// Inclusive at start (low), exclusive at end (high)
+fmt.Println(aSlice[1:4]) // [2 4 6] → indices 1,2,3
+
+// Omitting low or high
+// aSlice[:high] → from 0 to high-1
+// aSlice[low:] → from low to end
+// aSlice[:] → whole slice
+r := []int{0,1,2,3,4}
+fmt.Println(r[:3]) // [0 1 2]
+fmt.Println(r[2:]) // [2 3 4]
+fmt.Println(r[:])  // [0 1 2 3 4]
+```
+
 ## Loop
 
 Traditional loop
